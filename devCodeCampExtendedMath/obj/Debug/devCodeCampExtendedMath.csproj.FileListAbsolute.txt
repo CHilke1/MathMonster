@@ -1,0 +1,5 @@
+C:\Users\Chilke\Documents\Visual Studio 2015\Projects\devCodeCampExtendedMath\devCodeCampExtendedMath\bin\Debug\devCodeCampExtendedMath.dll
+C:\Users\Chilke\Documents\Visual Studio 2015\Projects\devCodeCampExtendedMath\devCodeCampExtendedMath\bin\Debug\devCodeCampExtendedMath.pdb
+C:\Users\Chilke\Documents\Visual Studio 2015\Projects\devCodeCampExtendedMath\devCodeCampExtendedMath\obj\Debug\devCodeCampExtendedMath.csprojResolveAssemblyReference.cache
+C:\Users\Chilke\Documents\Visual Studio 2015\Projects\devCodeCampExtendedMath\devCodeCampExtendedMath\obj\Debug\devCodeCampExtendedMath.dll
+C:\Users\Chilke\Documents\Visual Studio 2015\Projects\devCodeCampExtendedMath\devCodeCampExtendedMath\obj\Debug\devCodeCampExtendedMath.pdb
