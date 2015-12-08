@@ -73,7 +73,7 @@ namespace devCodeCampExtendedMath
                 int digit = (int)Enum.Parse(typeof(RomanDigit), numeral.ToString());
 
                 if (digit > maxDigit)
-                    throw new ArgumentException("Rule 3");
+                    return 0;
 
                 int nextDigit = 0;
                 if (ptr < roman.Length - 1)
@@ -151,7 +151,7 @@ namespace devCodeCampExtendedMath
                 }
                 sign = !sign;
             }
-            return total;
+            return System.Math.Abs(total);
         }
 
         private static int Negative(int num)

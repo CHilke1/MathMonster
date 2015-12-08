@@ -31,49 +31,65 @@ namespace ConsoleApplication1
                 string key_pressed = Console.ReadLine();
                 switch (key_pressed)
                 {
-                    case "1":
-                        Console.Write("Enter the top range of happy numbers: ");
-                        string input = Console.ReadLine();
-                        int limit = Int32.Parse(input);
-                        List<int> h = new List<int>();
-                        h = devCodeCampExtendedMath.Math.HappyNumbers(limit);
-                        for (int i = 0; i < h.Count; i++)
+                case "1":
+                    Console.Write("Enter the top range of happy numbers: ");
+                    string input = Console.ReadLine();
+                    int limit = Int32.Parse(input);
+                    List<int> happy_numbers = new List<int>();
+                    happy_numbers = devCodeCampExtendedMath.Math.HappyNumbers(limit);
+                    for (int i = 0; i < happy_numbers.Count; i++)
+                    {
+                        Console.WriteLine(happy_numbers[i]);
+                    }
+                    break;
+                case "2":
+                    Console.Write("Type Roman numeral to convert: ");
+                    input = Console.ReadLine();
+                    input = input.ToUpper().Trim();
+                    bool isRoman = true;
+                    foreach (char numeral in input)
+                    {
+                        if ("IVXLCDM".IndexOf(numeral) == -1)
                         {
-                            Console.WriteLine(h[i]);
+                            isRoman = false;
+                            Console.WriteLine("Please enter a valid numeral");
                         }
-                        break;
-                    case "2":
-                        Console.Write("Type Roman numeral to convert: ");
-                        input = Console.ReadLine();
-                        input = input.ToUpper().Trim();
+                    }
+                    if (isRoman)
+                    {
                         int roman_numeral_equiv = devCodeCampExtendedMath.Math.RomanNumeraltoInt(ref input);
                         Console.WriteLine(roman_numeral_equiv);
+                    }
+                    break;
+                case "3":
+                    Console.Write("Type two numbers to factor seperated by a comma: ");
+                    input = Console.ReadLine();
+                    string[] inputs = input.Split(',');
+                    if (inputs.Length != 2)
+                    {
+                        Console.WriteLine("Please enter exactly two numbers.");
                         break;
-                    case "3":
-                        Console.Write("Type two numbers to factor seperated by a comma: ");
-                        input = Console.ReadLine();
-                        string[] inputs = input.Split(',');
-                        int Euc1 = Int32.Parse(inputs[0]);
-                        int Euc2 = Int32.Parse(inputs[1]);
-                        int GCD = devCodeCampExtendedMath.Math.Euclidean(Euc1, Euc2);
-                        Console.WriteLine(GCD);
-                        break;
-                    case "4":
-                        Console.Write("Type a number to get the factorial !number: ");
-                        input = Console.ReadLine();
-                        int factorial = devCodeCampExtendedMath.Math.Factorial(Int32.Parse(input));
-                        Console.WriteLine(factorial);
-                        break;
-                    case "5":
-                        Console.Write("Type a number to get the alternating factorial !number: ");
-                        input = Console.ReadLine();
-                        int alt_factorial = devCodeCampExtendedMath.Math.AlternatingFactorial(Int32.Parse(input));
-                        Console.WriteLine(alt_factorial);
-                        break;
-                    default:
-                        Console.WriteLine("Please enter a value 1 - 4");
-                        break;
-
+                    }
+                    int Euc1 = Int32.Parse(inputs[0]);
+                    int Euc2 = Int32.Parse(inputs[1]);
+                    int GCD = devCodeCampExtendedMath.Math.Euclidean(Euc1, Euc2);
+                    Console.WriteLine(GCD);
+                    break;
+                case "4":
+                    Console.Write("Type a number to get the factorial !number: ");
+                    input = Console.ReadLine();
+                    int factorial = devCodeCampExtendedMath.Math.Factorial(Int32.Parse(input));
+                    Console.WriteLine(factorial);
+                    break;
+                case "5":
+                    Console.Write("Type a number to get the alternating factorial !number: ");
+                    input = Console.ReadLine();
+                    int alt_factorial = devCodeCampExtendedMath.Math.AlternatingFactorial(Int32.Parse(input));
+                    Console.WriteLine(alt_factorial);
+                    break;
+                default:
+                    Console.WriteLine("Please enter a value 1 - 4");
+                    break;
                 }
             bool keep_running = true;
             Console.Write("Do you wish to continue? (Y/N)");
