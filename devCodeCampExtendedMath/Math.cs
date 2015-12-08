@@ -102,8 +102,6 @@ namespace devCodeCampExtendedMath
 
         public static int Euclidean(int num1, int num2)
         {
-            int factor1 = num1;
-            int factor2 = num2;
             while (num1 != 0 && num2 != 0) {
                 {
                     if (num1 > num2)
